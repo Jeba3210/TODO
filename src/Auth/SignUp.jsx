@@ -64,13 +64,14 @@ function SignUp() {
   }
 
   return (
-    <div>
-        <div>
-          <h1>Welcome to Today Ahed!</h1>
-          <p>Let’s help to meet up your tasks.</p>
+    <div className='body flex flex-col items-center gap-6' >
+        <div className=' flex flex-col items-center mt-20'>
+          <h1 className='text-4xl font-bold'>Welcome to Today Ahead!</h1>
+          <p className='text-2xl font-semibold'>Let’s help to meet up your tasks.</p>
+          {/* <img src=" ./signup.png" alt="" /> */}
         </div>
         <div>
-          <form action="#" onSubmit={handleSubmit}>
+          <form action="#"  className='flex flex-col items-center gap-5 mt-6' onSubmit={handleSubmit}>
             <label htmlFor="name"></label>
               <input type="text" 
                      id='name' 
@@ -96,8 +97,8 @@ function SignUp() {
                      ref={cPassword}
                      />
 
-             <button>Register</button>
-              <p>Already have an account? <Link to="/login">Sign in</Link></p>
+             <button className='btn-primary mt-10'>Register</button>
+              <p className='text-lg'>Already have an account? <Link to="/login" className='text-cyan-400 font-semibold'> Sign in</Link></p>
           </form>
         </div>
     </div>

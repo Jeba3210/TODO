@@ -1,4 +1,17 @@
 
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .btn-primary {
+      @apply py-3 px-48 text-xl bg-cyan-400 text-white font-semibold rounded-lg shadow-md hover:bg-cyan-500 focus:outline-none focus:ring focus:ring-cyan-400 focus:ring-opacity-75;
+    }
+  }
+
+  @layer components {
+    input {
+      @apply py-3 px-24 text-xl  font-semibold rounded-lg shadow-md focus:outline-none focus:ring focus:ring-cyan-400 focus:ring-opacity-75;
+    }
+  }

@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify';
+import "../style/style.css"
 
 function LogIn() {
 
@@ -48,13 +49,13 @@ function LogIn() {
   }
 
   return (
-    <div>
-        <div>
-            <h1>Welcome Back!</h1>
-            <img src="https://cdni.iconscout.com/illustration/premium/thumb/todo-list-2839461-2371075.png" alt="" />
+    <div className='body flex flex-col items-center '>
+        <div className=' flex flex-col items-center mt-12'>
+            <h1 className='text-4xl font-bold'>Welcome Back!</h1>
+            <img className='w-80 h-76'  src="https://cdni.iconscout.com/illustration/premium/thumb/todo-list-2839461-2371075.png" alt="" />
         </div>
         <div>
-            <form action="#" onSubmit={handleLogIn}>
+            <form action="#"  className='flex flex-col items-center gap-5 mt-6' onSubmit={handleLogIn}>
                  <label htmlFor="email"></label>
                  <input type="text" 
                         id='email' 
@@ -67,8 +68,8 @@ function LogIn() {
                         placeholder='Enter Password'
                         ref={loginPassword}
                         />
-              <button type='submit'>Log In</button>
-            <p>Don’t have an account ? <Link to='/register'>Sign Up</Link></p>
+              <button className='btn-primary mt-8' type='submit'>Log In</button>
+            <p className='text-lg'>Don’t have an account ? <Link to='/register' className='text-cyan-400 font-semibold'>Sign Up</Link></p>
             </form>
         </div>
     </div>

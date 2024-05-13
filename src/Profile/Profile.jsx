@@ -90,31 +90,31 @@ function Profile() {
   }
 
   return (
-    <div>
+    <div  className='profile flex flex-col items-center gap-6 mt-10'>
       {userDetails &&
-        <div>
-          <img src="https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg" alt="" />
-          <p>Welcome {userDetails.name}</p>
+        <div className=' flex flex-col items-center'>
+          <img className='h-28' src="https://cdn-icons-png.freepik.com/256/10302/10302971.png?semt=ais_hybrid" alt="" />
+          <p className='text-2xl font-semibold'>Welcome {userDetails.name}</p>
         </div>
       }
       <div>
-        <form action="#" onSubmit={implementTaskSubmit}>
-          <label htmlFor="task">Your task</label>
-          <input type="text"
+        <form action="#" className=' shadow-[0_3px_10px_rgba(8,_112,_184,_0.7)] rounded-md h-76 gap-3 w-full flex  items-center p-10 mb-8' onSubmit={implementTaskSubmit}>
+          <label htmlFor="task"></label>
+          <input className='bg-cyan-200' type="text"
             id='task'
             placeholder='Enter your task'
             ref={task}
           />
-          <label htmlFor="desc">Description</label>
-          <input type="text"
+          <label htmlFor="desc"></label>
+          <input className='bg-cyan-200' type="text"
             id='desc'
             placeholder='Describe your task'
             ref={description}
           />
 
           {!toggleSubmit ?
-            <button type='submit'><MdOutlineAdd /></button> :
-            <button type='submit'><MdEdit /></button>
+            <button className='py-3 px-28 text-2xl bg-cyan-400 text-white font-semibold rounded-lg shadow-md hover:bg-cyan-500 focus:outline-none focus:ring focus:ring-cyan-400 focus:ring-opacity-75; ' type='submit'><MdOutlineAdd /></button> :
+            <button className='py-3 px-28 text-2xl bg-cyan-400 text-white font-semibold rounded-lg shadow-md hover:bg-cyan-500 focus:outline-none focus:ring focus:ring-cyan-400 focus:ring-opacity-75; ' type='submit'><MdEdit /></button>
           }
 
         </form>
